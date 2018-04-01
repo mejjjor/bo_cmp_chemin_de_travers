@@ -13,7 +13,7 @@ class Home extends Component {
             <h2>Where I am ?</h2>
           </div>
           <div className="card-block p-4">
-            <h4 className="card-title">Vous êtes sur le backoffice d&#39;une suberbe companie ! :)</h4>
+            <h4 className="card-title">Vous êtes sur le backoffice d&#39;une suberbe compagnie ! :)</h4>
             <p className="card-text">Vous devez surement chercher ce site&nbsp;:&nbsp;
               <a href="https://www.cheminsdetravers.org/">Les chemins de travers</a>
             </p>
