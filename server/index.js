@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
+const logger = require('morgan');
 const numCPUs = require('os').cpus().length;
 
 const PORT = process.env.PORT || 5000;
@@ -20,6 +21,8 @@ if (cluster.isMaster) {
 
 } else {
   const app = express();
+
+  app.use(logger('dev'));
 
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
