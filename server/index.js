@@ -1,8 +1,14 @@
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
 const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const logger = require('morgan');
 const numCPUs = require('os').cpus().length;
+
+// setupdb
+require('./db_connection.js')
 
 const PORT = process.env.PORT || 5000;
 
